@@ -50,9 +50,11 @@ const getQuote = () => {
   </div>
 
   <div class="flex justify-between">
-    <button class="btn btn-neutral text-lg w-1/4">
-      Submit a quote
-    </button>
+    <a href="https://forms.gle/eypt8ZaqBzt5wzfA7" target="_blank" class="w-fit">
+      <button class="btn btn-neutral text-lg">
+        Submit a quote
+      </button>
+    </a>
 
     <button class="btn btn-primary text-lg w-1/4" ref="buttonRef" @click="getQuote">
       Give me a quote

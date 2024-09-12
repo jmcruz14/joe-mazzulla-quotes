@@ -29,11 +29,8 @@ const setActiveTab = (tab: string) => {
         </div>
 
         <div class="flex row-reverse ">
-          <!-- <span>
-            Test me
-          </span> -->
           <div class="tooltip hover:cursor-pointer" data-tip="GitHub">
-            <a target="_blank" href="https://github.com/">
+            <a target="_blank" href="https://github.com/jmcruz14/joe-mazzulla-quotes">
               <i class="lab la-github text-4xl"></i>
             </a>
           </div>
