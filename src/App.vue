@@ -15,8 +15,8 @@ const setActiveTab = (tab: string) => {
 </script>
 
 <template>
-  <div class="m-0 p-0">
-    <div class="p-8 flex flex-col gap-8">
+  <div class="m-0 p-0 h-[100vh] flex flex-col justify-center">
+    <div class="p-8 m-4 flex flex-col gap-8 h-1/2 w-3/4 self-center card shadow-xl">
       <div class="flex flex-row justify-between items-center">
         <div class="flex flex-row gap-6 items-center">
           <span class="text-4xl font-weight-medium">Joe Mazzulla Quote Generator</span>
@@ -45,7 +45,7 @@ const setActiveTab = (tab: string) => {
           class="tab" 
           :class="{ 
             'tab-active': activeTab === 'Generate Quote',
-            '[--tab-bg:#1EB8AB]': activeTab === 'Generate Quote',
+            '[--tab-bg:#30A659]': activeTab === 'Generate Quote',
             'text-black': activeTab === 'Generate Quote'
           }" 
           @click="setActiveTab('Generate Quote')"
@@ -54,13 +54,12 @@ const setActiveTab = (tab: string) => {
         </a>
         <a 
           role="tab" 
-          class="tab" 
+          class="tab tab-disabled" 
           :class="{ 
             'tab-active': activeTab === 'Talk to Joe',
-            '[--tab-bg:#1EB8AB]': activeTab === 'Talk to Joe',
+            '[--tab-bg:#30A659]': activeTab === 'Talk to Joe',
             'text-black': activeTab === 'Talk to Joe' 
-          }" 
-          @click="setActiveTab('Talk to Joe')"
+          }"
         >
           Talk to Joe
         </a>
@@ -69,7 +68,7 @@ const setActiveTab = (tab: string) => {
           class="tab" 
           :class="{ 
             'tab-active': activeTab === 'About',
-            '[--tab-bg:#1EB8AB]': activeTab === 'About',
+            '[--tab-bg:#30A659]': activeTab === 'About',
             'text-black': activeTab === 'About' 
           }" 
           @click="setActiveTab('About')"
