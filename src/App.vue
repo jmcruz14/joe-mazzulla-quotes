@@ -15,23 +15,23 @@ const setActiveTab = (tab: string) => {
 </script>
 
 <template>
-  <div class="m-0 p-0 h-[100vh] flex flex-col justify-center">
-    <div class="p-8 m-4 flex flex-col gap-8 h-1/2 w-3/4 self-center card shadow-xl">
-      <div class="flex flex-row justify-between items-center">
-        <div class="flex flex-row gap-6 items-center">
-          <span class="text-4xl font-weight-medium">Joe Mazzulla Quote Generator</span>
+  <div class="m-0 p-0 h-[100vh] flex flex-col md:justify-center">
+    <div class="p-8 m-4 flex flex-col justify-center gap-8 h-[85%] md:h-3/5 w-3/4 grow md:grow-0 self-center card shadow-xl">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex flex-row md:gap-6 items-center">
+          <span class="text-2xl md:text-4xl font-weight-medium">Joe Mazzulla Quote Generator</span>
           <!-- <img src="./assets/joe_mazzulla_avatar.png" /> -->
           <div class="avatar">
-            <div class="w-12 rounded">
+            <div class="w-8 md:w-12 rounded">
               <img src="https://hoopshype.com/wp-content/uploads/sites/92/2022/09/i_a2_65_ca_joe-mazzulla.png" />
             </div>
           </div>
         </div>
 
-        <div class="flex row-reverse ">
+        <div class="flex self-end invisible md:visible">
           <div class="tooltip hover:cursor-pointer" data-tip="GitHub">
             <a target="_blank" href="https://github.com/jmcruz14/joe-mazzulla-quotes">
-              <i class="lab la-github text-4xl"></i>
+              <i class="lab la-github text-3xl md:text-4xl"></i>
             </a>
           </div>
         </div>
@@ -39,7 +39,7 @@ const setActiveTab = (tab: string) => {
       <div role="tablist" class="tabs tabs-lifted">
         <a 
           role="tab"
-          class="tab" 
+          class="tab text-xs md:text-md" 
           :class="{ 
             'tab-active': activeTab === 'Generate Quote',
             '[--tab-bg:#30A659]': activeTab === 'Generate Quote',
@@ -51,7 +51,7 @@ const setActiveTab = (tab: string) => {
         </a>
         <a 
           role="tab" 
-          class="tab tab-disabled" 
+          class="tab tab-disabled text-xs md:text-md" 
           :class="{ 
             'tab-active': activeTab === 'Talk to Joe',
             '[--tab-bg:#30A659]': activeTab === 'Talk to Joe',
@@ -62,7 +62,7 @@ const setActiveTab = (tab: string) => {
         </a>
         <a 
           role="tab" 
-          class="tab" 
+          class="tab text-xs md:text-md"
           :class="{ 
             'tab-active': activeTab === 'About',
             '[--tab-bg:#30A659]': activeTab === 'About',

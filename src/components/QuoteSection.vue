@@ -25,10 +25,10 @@ const getQuote = () => {
 </script>
 
 <template>
-  <div class="p-6 bg-white h-[200px] border-[1px] border-slate-300 flex flex-col items-center justify-center rounded-md">
+  <div class="p-6 bg-white h-[450px] md:h-[250px] border-[1px] border-slate-300 flex flex-col items-center justify-center rounded-md">
     <Transition name="fade" mode="out-in">
       <div :key="resultQuote" class="flex flex-col gap-2">
-        <span class="text-black font-body text-xl italic font-semibold">
+        <span class="text-black font-body text-md lg:text-xl italic font-semibold">
           {{ resultQuote }}
         </span>
 
@@ -51,13 +51,13 @@ const getQuote = () => {
 
   <div class="flex justify-between">
     <a href="https://forms.gle/eypt8ZaqBzt5wzfA7" target="_blank" class="w-fit">
-      <button class="btn btn-neutral text-lg">
+      <button class="btn btn-neutral text-md md:text-lg">
         Submit a quote
       </button>
     </a>
 
-    <button class="btn btn-primary text-lg w-1/4" ref="buttonRef" @click="getQuote">
-      Give me a quote
+    <button class="btn btn-primary text-md md:text-lg w-1/4" ref="buttonRef" @click="getQuote">
+      Get quote
     </button>
   </div>
 </template>
